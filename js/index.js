@@ -1,8 +1,8 @@
 const getId = "https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1";
-var Spades = [];
-var Clubs = [];
-var Hearts = [];
-var Diamonds = [];
+let Spades = [];
+let Clubs = [];
+let Hearts = [];
+let Diamonds = [];
 
 let ranks = new Map([
   ["ACE", 1],
