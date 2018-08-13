@@ -87,7 +87,6 @@ function drawTwo(endPoint) {
       ) {
         drawTwo(endPoint);
       } else {
-        console.log("********** QUEEN");
         //display the data after Queen is picken in all the suits
         if (
           Clubs.map(x => x.value).indexOf("QUEEN") !== -1 &&
@@ -119,7 +118,7 @@ function drawTwo(endPoint) {
 function start() {
   getDeckId().then(function (deckId) {
     const getTwoCards = `https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=2`;
-    for (let count = 1; count <= 4; count++) {
+    for (let count = 1; count < 5; count++) {
       drawTwo(getTwoCards);
     }
   });
