@@ -115,7 +115,7 @@ function drawTwo(endPoint) {
     });
 }
 
-//function to call the second URL to Untill all the queens are picked
+//function to call the second URL to Untill all the queens are picked using the DeckId from the first URL
 function start() {
   getDeckId().then(function (deckId) {
     const getTwoCards = `https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=2`;
