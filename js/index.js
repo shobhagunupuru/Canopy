@@ -66,6 +66,7 @@ function drawTwo(endPoint) {
     .then(json)
     .then(deckdata => {
       for (let i in deckdata.cards) {
+        // push the cards into the respective suits
         if (deckdata.cards[i].suit === "HEARTS") {
           Hearts.push(createCard(deckdata.cards[i].value));
         }
@@ -79,7 +80,7 @@ function drawTwo(endPoint) {
           Diamonds.push(createCard(deckdata.cards[i].value));
         }
       }
-
+  //if any of the cards does not contain the QUEEN call the endpoint
       if (
         deckdata.cards[0].value !== "QUEEN" &&
         deckdata.cards[1].value !== "QUEEN"
@@ -87,6 +88,7 @@ function drawTwo(endPoint) {
         drawTwo(endPoint);
       } else {
         console.log("********** QUEEN");
+        //display the data after Queen is picken in all the suits
         if (
           Clubs.map(x => x.value).indexOf("QUEEN") !== -1 &&
           Spades.map(x => x.value).indexOf("QUEEN") !== -1 &&
