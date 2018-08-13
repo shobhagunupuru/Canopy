@@ -21,7 +21,7 @@ let ranks = new Map([
 ]);
 // create a card
 function createCard(value) {
-  var card = {};
+  let card = {};
   card.value = value;
   card.rank = ranks.get(value);
   return card;
